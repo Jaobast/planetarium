@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+html { scroll-behavior: smooth;}
 
 body {
     width: 100vw;
@@ -76,10 +77,13 @@ main{
     z-index: 2;
 }
 
+#start{
+    padding-top: 15vh;
+}
+
 h1{
     font-size: 1.51rem;
     width: 100%;
-    margin: 15vh 0 1vh;
     white-space: nowrap;
 }
 
@@ -179,7 +183,9 @@ p{
 
     /* PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM*/
 
-
+#programm{
+    padding-top: 10vh;
+}
 .programm{
     border-bottom: 1px solid var(--green);
     padding-bottom: 50px;
@@ -188,7 +194,7 @@ p{
 
 .text-big01{
     font-size: 1.51rem;
-    margin: 10vh 0 4vh;
+    margin-bottom: 4vh;
 }
 
 .text-big02{ font-size: 0.8rem;}
