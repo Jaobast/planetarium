@@ -64,11 +64,16 @@ main{
 }
 
 h1{
-    font-size: 1.7rem;
+    font-size: 1.65rem;
     width: 100%;
     white-space: nowrap;
-    animation: glow 2s ease-in-out infinite alternate;
+/*     animation: glow 2s ease-in-out infinite alternate; */
     margin-bottom: 2vh;
+}
+
+.stroke{
+    color: transparent!important;
+    -webkit-text-stroke: 1px var(--green);
 }
 
 @keyframes glow {
