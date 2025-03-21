@@ -216,7 +216,7 @@ p{
 
     /* BESUCH  BESUCH  BESUCH  BESUCH  BESUCH  BESUCH  BESUCH  BESUCH  BESUCH   BESUCH  BESUCH*/
 
-.card{
+.card, .ticket{
     position: relative;
     background-color: var(--purple);
     padding: 25px 25px 10px;
@@ -229,7 +229,7 @@ p{
     text-decoration: none;
 }
 
-.card p, .card span{ color: var(--dark);}
+.card p, .card span, .ticket p, .ticket span{ color: var(--dark);}
 
 .address{
     display: flex; flex-direction: column;
@@ -254,6 +254,30 @@ p{
 .address, .open{
     position: relative;
     z-index: 3;
+}
+
+.ticket{
+    margin-top: 3vh;
+    display: flex;
+    gap: 30px;
+}
+
+.ticket .eintritt{
+    margin-bottom: 5vh;
+}
+
+.ticket img{
+    position: absolute;
+    z-index: 3;
+    top: 10px; right: 10px;
+    height: calc(100% - 20px);
+    border-radius: 100px;
+}
+
+.dotted-line {
+    width: 2px;
+    height: 100px;
+    border-left: 2px dotted black;
 }
 
 .light {
