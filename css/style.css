@@ -11,30 +11,26 @@ body {
     background-color: var(--dark);
 }
 
+.light-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 300vh;
+    overflow-x: hidden;
+}
+
 .light{
     position: absolute;
     transform: translateX(-50%);
     left: 50vw;
-    width: 150vw; height: 150vw;
+    width: 170vw; height: 170vw;
     border-radius: 50%;
     filter: blur(70px);
 }
 
-.light::before {
-    content: "";
-    position: absolute;
-    top: -100px; left: -100px;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    filter: blur(300px);
-    opacity: 0.8;
-}
-
 .blue{background-color: var(--blue); top: 40vh; z-index: -1;}
-.blue::before{background-color: var(--blue);z-index: -2;}
-
-.red{background-color: var(--red); top: 120vh; z-index: 1;}
-.red::before{background-color: var(--red);z-index: 0;}
+.red{background-color: var(--red); top: 130vh; z-index: 1;}
 
 .container{
     width: 86vw;
@@ -95,13 +91,13 @@ h2{
 
     /* SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE*/
 .slider{
-    margin-left: -7vw;
+    margin-left: -7vw!important;
     width: 100vw;
     margin: 10vh 0;
 }
 
 .marquee{
-    overflow: clip;
+    overflow-x: hidden;
 }
 
 .highlight{
