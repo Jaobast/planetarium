@@ -10,11 +10,11 @@ body {
     overflow-x: hidden;
     background: linear-gradient(
         to bottom,
-        #111144 10%,
-        #3E3ECC 30%,
-        #C51818 50%,
-        #3E3ECC 70%,
-        #111144 90%
+        var(--dark) 10%,
+        var(--blue) 30%,
+        var(--red) 50%,
+        var(--blue) 70%,
+        var(--dark) 90%
     );
 }
 
@@ -67,7 +67,18 @@ h1{
     font-size: 1.7rem;
     width: 100%;
     white-space: nowrap;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 2vh;
 }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 0px var(--green);
+    }
+    to {
+      text-shadow: 0 0 15px var(--green)}
+}
+
 
 h2{
     font-size: 0.8rem;
@@ -82,7 +93,10 @@ h2{
     margin: 10vh 0;
 }
 
-.slider02{ margin: 3vh 0;}
+.slider02{
+    margin: 3vh 0;
+    margin: 5vh 0 10vh 0;
+}
 
 .marquee{
     overflow-x: hidden;
@@ -138,7 +152,15 @@ p{
     text-transform: uppercase;
     color: white;
     font-size: 12px;
+    line-height: 1.5;
 }
+
+.text-big01{
+    font-size: 1.51rem;
+}
+
+.text-big02{ font-size: 0.8rem;}
+.text-small{ font-size: 0.6rem;}
 
 .purple{ color: var(--purple);}
 
@@ -178,12 +200,6 @@ p{
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
-
-.text-big01{
-    font-size: 1.51rem;
-}
-
-.text-big02{ font-size: 0.8rem;}
 
 .programm-info{
     display: flex;
