@@ -1,0 +1,195 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--dark);
+}
+
+.light{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50vw;
+    width: 150vw; height: 150vw;
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+.light::before {
+    content: "";
+    position: absolute;
+    top: -100px; left: -100px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    filter: blur(300px);
+    opacity: 0.8;
+}
+
+.blue{background-color: var(--blue); top: 40vh; z-index: -1;}
+.blue::before{background-color: var(--blue);z-index: -2;}
+
+.red{background-color: var(--red); top: 120vh; z-index: 1;}
+.red::before{background-color: var(--red);z-index: 0;}
+
+.container{
+    width: 86vw;
+    margin: 0 auto 0;
+}
+
+/* NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV*/
+nav{
+    width: 100vw;
+    margin-left: -7vw; padding: 2vh 7vw;
+    display: flex;
+    justify-content: space-between; align-items: center;
+    position: fixed;
+    top: 0; 
+    z-index: 10;
+
+    background-color: var(--dark);
+/*     border-bottom:white 0.5px solid; */
+    border-radius: 0 0 30px 30px ;
+}
+
+nav .menu{
+    display: flex;
+    gap: 16px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+/* MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN*/
+main{
+    position: relative;
+    z-index: 2;
+}
+
+h1{
+    font-size: 1.51rem;
+    width: 100%;
+    margin: 15vh 0 1vh;
+    white-space: nowrap;
+}
+
+h2{
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+
+    /* SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE*/
+.slider{
+    margin-left: -7vw;
+    width: 100vw;
+    margin: 10vh 0;
+}
+
+.marquee{
+    overflow: clip;
+}
+
+.highlight{
+    display: flex;
+    padding-left: 4.8rem;
+    gap: 4.8rem;
+    width: max-content;
+
+    animation: slide 15s linear infinite;
+}
+
+.highlight p{
+    white-space: nowrap;
+    color: var(--purple);
+    font-size: 0.6rem;
+}
+
+@keyframes slide { to{transform: translateX(-50%);}}
+
+.fadeout-horizontal{
+    mask-image: linear-gradient(
+        to right, transparent,
+        black 5rem, black calc(100% - 5rem),
+        transparent
+    );
+}
+
+    /* TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE*/
+
+.text-block{
+    display: flex; flex-direction: column;
+    gap: 30px;
+    margin: 5vh 0 10vh;
+}
+
+.bold{
+    font-family: "Boldonse", system-ui;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.text{font-size: 8.3px;}
+
+p{
+    font-family: "ABeeZee", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+.purple{ color: var(--purple);}
+
+
+
+    /* GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY*/
+
+.gallery {
+    display: grid;
+    grid-template-areas:
+    "pic01 pic01 pic01 pic01 pic04 pic04"
+    "pic02 pic02 pic03 pic03 pic04 pic04"
+    "pic02 pic02 pic03 pic03 pic04 pic04";
+    gap: 5px;
+}
+      
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+      
+.pic01 { grid-area: pic01; }
+.pic02 { grid-area: pic02; aspect-ratio: 1/1;}
+.pic03 { grid-area: pic03; aspect-ratio: 1/1;}
+.pic04 { grid-area: pic04; height: 100%;}
+
+
+
+    /* PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM*/
+
+
+.programm{
+    border-bottom: 1px solid var(--green);
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.text-big01{
+    font-size: 1.51rem;
+    margin: 10vh 0 4vh;
+}
+
+.text-big02{ font-size: 0.8rem;}
+
+.programm-info{
+    display: flex;
+    justify-content: space-between; align-items: end;
+    margin-bottom: 50px;
+}

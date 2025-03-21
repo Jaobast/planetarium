@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap'); /* font-family: "Boldonse", system-ui; */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap'); /* font-family: "ABeeZee", sans-serif; */
+
+
+:root{
+    --green: #94DDBC;
+    --purple: #9B9BE3;
+    --blue: #3E3ECC;
+    --red: #C51818;
+    --dark: #111144;
+
+
+
+    --text-S: 12px;
+    --text-default: 15px;
+    --text-M: 20px;
+    --text-L: 25px;
+    --text-XL: 30px;
+    --text-XXL: 40px;
+}
