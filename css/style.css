@@ -57,7 +57,7 @@ nav a{
 
 .wallpaper-sterne{
     position: fixed;
-    top: 7vh; left: -7vw;
+    top: 7vh; left: 0;
     width: 100vw;
     opacity: 0.5;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 80%);
