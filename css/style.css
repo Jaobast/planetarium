@@ -50,9 +50,14 @@ nav{
     top: 0; 
     z-index: 10;
 
-    background-color: var(--dark);
-/*     border-bottom:white 0.5px solid; */
+background: linear-gradient(
+    to bottom,
+    var(--dark) 10%, 
+    rgba(0, 0, 0, 0) 100%
+    );
     border-radius: 0 0 30px 30px ;
+    backdrop-filter: blur (5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 nav .menu{
