@@ -20,7 +20,7 @@ body {
 
 .container{
     width: 86vw;
-    margin: 0 auto 0;
+    margin: 0 auto 10vh;
 }
 
 /* NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV*/
@@ -181,6 +181,8 @@ p{
     "pic01 pic01 pic04"
     "pic02 pic03 pic04"
     "pic02 pic03 pic04";
+
+    height: fit-content;
     gap: 5px;
 }
       
@@ -190,7 +192,7 @@ p{
     border-radius: 100px;
 }
       
-.pic01 { grid-area: pic01; }
+.pic01 { grid-area: pic01; height: 100%; margin-bottom: -10%;}
 .pic02 { grid-area: pic02; aspect-ratio: 1/1;}
 .pic03 { grid-area: pic03; aspect-ratio: 1/1;}
 .pic04 { grid-area: pic04; height: 100%;}
@@ -251,15 +253,13 @@ p{
     opacity: 0.3;
 }
 
-.address, .open{
+.address, .open, .price{
     position: relative;
     z-index: 3;
 }
 
 .ticket{
     margin-top: 3vh;
-    display: flex;
-    gap: 30px;
 }
 
 .ticket .eintritt{
@@ -275,8 +275,12 @@ p{
 }
 
 .dotted-line {
+    position: absolute;
+    z-index: 3;
+    top: 0; right: 23vw;
+
     width: 2px;
-    height: 100px;
+    height: 100%;
     border-left: 2px dotted black;
 }
 
@@ -294,7 +298,12 @@ p{
 }
 
 .card .light {
-    animation: light-card 8s linear infinite;
+    animation: light-card 12s linear infinite;
+}
+
+.ticket .light{
+    animation: light-ticket 12s linear infinite;
+    background-color: var(--green); opacity: 0.2;
 }
 
 @keyframes light-card {
@@ -302,5 +311,12 @@ p{
     25% { bottom: 15vw; right: -10vw; opacity: 0.9; }
     50% { bottom: 20vw; right: 30vw; opacity: 0.8; }
     75% { bottom: -15vw; opacity: 0.9; }
+}
+
+@keyframes light-ticket {
+    0%, 100% { bottom: 20vw; right: 30vw; opacity: 0.8; }
+    25% { bottom: -20vw; opacity: 0.9; }
+    50% { bottom: -25vw; right: -30vw; opacity: 1; }
+    75% { bottom: 5vw; right: -10vw; opacity: 0.9; }
 }
 
