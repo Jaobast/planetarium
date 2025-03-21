@@ -56,12 +56,13 @@ nav a{
 /* MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN*/
 
 .wallpaper-sterne{
-    position: absolute;
+    position: fixed;
     top: 7vh; left: -7vw;
     width: 100vw;
-    opacity: 0.7;
+    opacity: 0.5;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 80%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 80%);
+    z-index: -1;
 }
 
 main{
@@ -185,9 +186,9 @@ p{
 .gallery {
     display: grid;
     grid-template-areas:
-    "pic01 pic01 pic01 pic01 pic04 pic04"
-    "pic02 pic02 pic03 pic03 pic04 pic04"
-    "pic02 pic02 pic03 pic03 pic04 pic04";
+    "pic01 pic01 pic04"
+    "pic02 pic03 pic04"
+    "pic02 pic03 pic04";
     gap: 5px;
 }
       
