@@ -244,6 +244,7 @@ p{
 
 .card img{
     position: absolute;
+    z-index: 3;
     top: 25px; right: 25px;
     width: 12vw;
 
@@ -255,24 +256,27 @@ p{
     z-index: 3;
 }
 
-.light{
+.light {
     position: absolute;
     z-index: 2;
-    transform: translateX(-50%);
-    width: 50vw; height: 50vw;
+    transform: translateX(-50%) translateZ(0);
+    width: 50vw;
+    height: 50vw;
     border-radius: 50%;
-    filter: blur(30px);
+    filter: blur(50px);
     background-color: var(--green);
+    will-change: transform, filter;
+    backface-visibility: hidden;
 }
 
-.card .light{
+.card .light {
     animation: light-card 8s linear infinite;
 }
 
 @keyframes light-card {
-    0%, 100%{ bottom: -20vw; right:-30vw;}
-    25%{ bottom: 15vw; right: -10vw}
-    50%{ bottom: 20vw; right: 30vw}
-    75%{ bottom: -15vw}
+    0%, 100% { bottom: -20vw; right: -30vw; opacity: 1; }
+    25% { bottom: 15vw; right: -10vw; opacity: 0.9; }
+    50% { bottom: 20vw; right: 30vw; opacity: 0.8; }
+    75% { bottom: -15vw; opacity: 0.9; }
 }
 
