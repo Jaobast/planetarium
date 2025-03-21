@@ -221,6 +221,7 @@ p{
     background-color: var(--purple);
     padding: 25px 25px 10px;
     border-radius: 24px;
+    overflow: hidden;
 }
 
 .card a[href^="tel"] {
@@ -248,3 +249,30 @@ p{
 
     opacity: 0.3;
 }
+
+.address, .open{
+    position: relative;
+    z-index: 3;
+}
+
+.light{
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50%);
+    width: 50vw; height: 50vw;
+    border-radius: 50%;
+    filter: blur(30px);
+    background-color: var(--green);
+}
+
+.card .light{
+    animation: light-card 8s linear infinite;
+}
+
+@keyframes light-card {
+    0%, 100%{ bottom: -20vw; right:-30vw;}
+    25%{ bottom: 15vw; right: -10vw}
+    50%{ bottom: 20vw; right: 30vw}
+    75%{ bottom: -15vw}
+}
+
