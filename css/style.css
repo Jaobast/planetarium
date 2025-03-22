@@ -88,7 +88,7 @@ main{
 }
 
 .slider02{
-    margin: 3vh 0 8vh 0;
+    margin: 3vh 0 8vh;
 }
 
 .marquee{
@@ -197,6 +197,7 @@ a[href^="tel"] {
 
 .programm-image{
     position: relative;
+    z-index: 2;
     width: 100vw; height: 40vh;
     background-color: black;
 }
@@ -207,12 +208,14 @@ a[href^="tel"] {
 }
 
 .programm-image .black-linear{
-    position: absolute; top: 0; left: 0;
+    position: absolute; bottom: 0; left: 0;
     width: 100%; height: 100%;
     background: linear-gradient(to top, black 10%, rgba(0, 0, 0, 0) 40%);
 }
 
 .programm-text{
+    position: relative;
+    z-index: 3;
     padding: 0 7vw;
     width: 100vw;
     background: linear-gradient(
@@ -373,3 +376,35 @@ footer{
 }
 
 footer p{ color: var(--green);}
+
+
+@media (orientation: landscape) and (min-width: 575px){
+    body {
+        background: linear-gradient(
+            to bottom,
+            var(--dark) 0%,
+            var(--dark) 100%
+        );
+    }
+    
+    .container{
+        background: linear-gradient(
+            to bottom,
+            var(--dark) 5%,
+            var(--blue) 20%,
+            var(--blue) 50%,
+            var(--dark) 90%
+        );
+        max-width: 575px; padding: 40px;
+    }
+
+    nav{ width: 575px; margin-left: -40px; padding: 3vh 40px 1.5vh;}
+    .wallpaper-sterne{ width: 575px; left: -40px;}
+    .slider{width: 575px; margin-left: -40px!important;}
+    .programm{ width: 575px; margin-left: -40px;}
+    .programm-image{ width: 575px;}
+    .programm-text{ width: 575px; padding: 40px;}
+
+    .card img{ width: 60px;}
+    .dotted-line {right: 100px;}
+}
