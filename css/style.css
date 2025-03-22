@@ -170,33 +170,11 @@ p{
 
 
 
-    /* GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY  GALLERY*/
-
-.gallery {
-    display: grid;
-    grid-template-areas:
-    "pic01 pic01 pic04"
-    "pic02 pic03 pic04"
-    "pic02 pic03 pic04";
-
-    height: fit-content;
-    gap: 5px;
-}
-      
-.gallery img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 100px;
-}
-      
-.pic01 { grid-area: pic01; height: 100%; margin-bottom: -10%;}
-.pic02 { grid-area: pic02; aspect-ratio: 1/1;}
-.pic03 { grid-area: pic03; aspect-ratio: 1/1;}
-.pic04 { grid-area: pic04; height: 100%;}
-
-
-
     /* PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM*/
+
+
+.break{ display: flex; align-items: center; }
+.logo-break{ margin: 0 auto;}
 
 #programm{
     padding-top: 10vh;
@@ -208,7 +186,7 @@ p{
     display: flex; flex-direction: column;
     gap: 0;
     overflow: hidden;
-    border-radius: 50px 50px 0 0;
+    border-radius: 40px 40px 0 0;
 }
 
 .programm-image{
@@ -375,4 +353,3 @@ p{
     50% { bottom: -25vw; right: -30vw; opacity: 1; }
     75% { bottom: 5vw; right: -10vw; opacity: 0.9; }
 }
-
