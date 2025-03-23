@@ -222,6 +222,11 @@ a[href^="tel"] {
     text-decoration: none;
 }
 
+.link-text{
+    text-decoration: none;
+    font-size: 11px; font-weight: 500;
+}
+
 
     /* PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM*/
 
