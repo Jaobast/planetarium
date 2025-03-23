@@ -227,12 +227,20 @@ a[href^="tel"] {
 }
 
 
-
     /* PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM  PROGRAMM*/
 
 
 .break{ display: flex; align-items: center; }
-.logo-break{ margin: 0 auto;}
+.logo-break{
+    width: 16vw;
+    margin: 0 auto;
+    animation: logo-scale 3s ease-in-out infinite alternate;
+}
+
+@keyframes logo-scale {
+    0%, 100% { scale: 1;}
+    50% { scale: 0.9;}
+}
 
 #programm{
     padding-top: 10vh;
