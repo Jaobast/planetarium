@@ -12,12 +12,12 @@ body {
         to bottom,
         #2B2B90 0%,
         var(--blue) 20%,
-        var(--blue) 50%,
-        var(--red) 70%,
-        var(--dark) 90%
+        var(--blue) 30%,
+        var(--red) 60%,
+        var(--dark) 75%
     );
 
-    background-position: 0 100vh;
+    background-position: 0 100dvh;
 }
 
 .container{
@@ -65,25 +65,29 @@ nav a{
     top: 0; left: 0;
 
     z-index: 12;
-    height: 100vh; width: 100%;
-    display: flex; flex-direction: column;
-    padding: 0 7vw;
+    height: 100dvh; width: 100%;
+    padding: 0 7vw 3vh;
 
     background: linear-gradient(
         to bottom,
         var(--dark) 5%,
         #2B2B90 100%
     );
+
+    display: flex; flex-direction: column;
+    justify-content: end;
 }
 
-.start-screen h1{
-    margin-top: 15vh;
+
+.start-screen .logo-container{
+    width: 100%;
+    display: flex; justify-content: center;
+    margin: 10vh 0 25vh;
+
 }
 
-.start-screen .logo-container{ width: 100%; display: flex; justify-content: center;}
 .start-screen .logo{
     width: 25vw;
-    margin-top: 10vh;
     animation: logo-glow-scale 3s ease-in-out infinite alternate;
 }
 
@@ -101,18 +105,18 @@ nav a{
 
 .wallpaper-sterne{
     position: absolute;
-    top: 7vh; left: -7vw;
+    top: 0vh; left: 0;
     width: 100vw;
-    opacity: 0.5;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 80%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 80%);
+    opacity: 0.6;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
 }
 
-main{
-    position: relative;
-    z-index: 2;
-    margin-top: 100vh;
+
+.start-text{
+    margin-top: 100dvh;
+    padding-top: 1dvh;
 }
 
 .stroke{
@@ -125,7 +129,6 @@ main{
 .slider{
     margin-left: -7vw!important;
     width: 100vw;
-    margin-top: 25vh;
 }
 
 .back{ margin-top: 2vh;}
