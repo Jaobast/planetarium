@@ -10,12 +10,14 @@ body {
     overflow-x: hidden;
     background: linear-gradient(
         to bottom,
-        var(--dark) 5%,
+        #2B2B90 0%,
         var(--blue) 20%,
         var(--blue) 50%,
         var(--red) 70%,
         var(--dark) 90%
     );
+
+    background-position: 0 100vh;
 }
 
 .container{
@@ -55,6 +57,48 @@ nav a{
 
 /* MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN*/
 
+
+    /* START   START   START   START   START   START   START   START   START   START*/
+
+.start-screen{
+    position: absolute;
+    top: 0; left: 0;
+
+    z-index: 12;
+    height: 100vh; width: 100%;
+    display: flex; flex-direction: column;
+    padding: 0 7vw;
+
+    background: linear-gradient(
+        to bottom,
+        var(--dark) 5%,
+        #2B2B90 100%
+    );
+}
+
+.start-screen h1{
+    margin-top: 25vh;
+}
+
+.start-screen .logo-container{ width: 100%; display: flex; justify-content: center;}
+.start-screen .logo{
+    width: 25vw;
+    margin-top: 10vh;
+    animation: logo-glow-scale 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes logo-glow-scale {
+    0%, 100% {
+        scale: 1;
+        filter: drop-shadow(0 0 3px var(--green));
+    }
+    50% {
+        scale: 0.9;
+        filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+    }
+}
+
 .wallpaper-sterne{
     position: absolute;
     top: 7vh; left: -7vw;
@@ -68,10 +112,7 @@ nav a{
 main{
     position: relative;
     z-index: 2;
-}
-
-#start{
-    padding-top: 20vh;
+    margin-top: 100vh;
 }
 
 .stroke{
@@ -84,8 +125,10 @@ main{
 .slider{
     margin-left: -7vw!important;
     width: 100vw;
-    margin: 12vh 0;
+    margin-top: 25vh;
 }
+
+.back{ margin-top: 2vh;}
 
 .slider02{
     margin: 3vh 0 8vh;
@@ -101,8 +144,10 @@ main{
     gap: 4.8rem;
     width: max-content;
 
-    animation: slide 15s linear infinite;
+    animation: slide 15s linear infinite forwards;
 }
+
+.highlight-back{ animation-direction: reverse;}
 
 .slider02 .highlight{ animation: slide02 8s linear infinite;}
 
