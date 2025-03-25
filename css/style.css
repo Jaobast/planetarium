@@ -467,6 +467,7 @@ footer p{ color: var(--green);}
     header .logo{ width: 15vw;}
     .wallpaper-sterne{ width: 575px;}
     .slider{width: 575px; margin-left: -40px!important;}
+    .logo-break{ width: 5vw;}
     .programm{ width: 575px; margin-left: -40px;}
     .programm-image{ width: 575px;}
     .programm-text{ width: 575px; padding: 40px;}
