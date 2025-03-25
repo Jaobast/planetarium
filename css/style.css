@@ -83,10 +83,13 @@ header .logo-container{
 
 }
 
+
 header .logo{
     width: 25vw;
     animation: logo-glow-scale 3s ease-in-out infinite alternate;
 }
+
+header .description{width: 110px;}
 
 
 @keyframes logo-glow-scale {
@@ -459,10 +462,11 @@ footer p{ color: var(--green);}
     }
 
     nav{ width: 575px; margin-left: -40px; padding: 3vh 40px 1.5vh;}
-    header{ width: 575px; transform: translateX(-50%) ;left: 50%;}
+    header{ width: 575px; transform: translateX(-50%) ;left: 50%; padding-left: 40px; padding-right: 40px;}
+    h1{ font-size: 34px;}
+    header .logo{ width: 15vw;}
     .wallpaper-sterne{ width: 575px;}
-    .slider{width: 575px;}
-    .slider02 .marquee{margin-left: 60px;}
+    .slider{width: 575px; margin-left: -40px!important;}
     .programm{ width: 575px; margin-left: -40px;}
     .programm-image{ width: 575px;}
     .programm-text{ width: 575px; padding: 40px;}
