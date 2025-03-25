@@ -55,12 +55,9 @@ nav a{
     font-size: 0.7rem;
 }
 
-/* MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN*/
+/* HEADER   HEADER   HEADER   HEADER   HEADER   HEADER   HEADER   HEADER   HEADER*/
 
-
-    /* START   START   START   START   START   START   START   START   START   START*/
-
-.start-screen{
+header{
     position: absolute;
     top: 0; left: 0;
 
@@ -79,14 +76,14 @@ nav a{
 }
 
 
-.start-screen .logo-container{
+header .logo-container{
     width: 100%;
     display: flex; justify-content: center;
     margin-top: 16svh;
 
 }
 
-.start-screen .logo{
+header .logo{
     width: 25vw;
     animation: logo-glow-scale 3s ease-in-out infinite alternate;
 }
@@ -113,6 +110,54 @@ nav a{
     z-index: -1;
 }
 
+    /* SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE*/
+    .slider{
+        margin-left: -7vw!important;
+        width: 100vw;
+    }
+    
+    .back{ margin-top: 2vh;}
+    
+    .slider02{
+        margin: 3vh 0 8vh;
+    }
+    
+    .marquee{
+        overflow-x: hidden;
+    }
+    
+    .highlight{
+        display: flex;
+        padding-left: 4.8rem;
+        gap: 4.8rem;
+        width: max-content;
+    
+        animation: slide 15s linear infinite forwards;
+    }
+    
+    .highlight-back{ animation-direction: reverse;}
+    
+    .slider02 .highlight{ animation: slide02 8s linear infinite;}
+    
+    .highlight p{
+        white-space: nowrap;
+        color: var(--purple);
+        font-size: 0.7rem;
+    }
+    
+    @keyframes slide { to{transform: translateX(-50%);}}
+    @keyframes slide02 { to{transform: translateX(-33.33%);}}
+    
+    .fadeout-horizontal{
+        mask-image: linear-gradient(
+            to right, transparent,
+            black 5rem, black calc(100% - 5rem),
+            transparent
+        );
+    }
+
+/* MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN   MAIN*/
+
 
 .start-text{
     margin-top: 100svh;
@@ -124,52 +169,6 @@ nav a{
     -webkit-text-stroke: 1px var(--green);
 }
 
-
-    /* SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE   SLIDE*/
-.slider{
-    margin-left: -7vw!important;
-    width: 100vw;
-}
-
-.back{ margin-top: 2vh;}
-
-.slider02{
-    margin: 3vh 0 8vh;
-}
-
-.marquee{
-    overflow-x: hidden;
-}
-
-.highlight{
-    display: flex;
-    padding-left: 4.8rem;
-    gap: 4.8rem;
-    width: max-content;
-
-    animation: slide 15s linear infinite forwards;
-}
-
-.highlight-back{ animation-direction: reverse;}
-
-.slider02 .highlight{ animation: slide02 8s linear infinite;}
-
-.highlight p{
-    white-space: nowrap;
-    color: var(--purple);
-    font-size: 0.7rem;
-}
-
-@keyframes slide { to{transform: translateX(-50%);}}
-@keyframes slide02 { to{transform: translateX(-33.33%);}}
-
-.fadeout-horizontal{
-    mask-image: linear-gradient(
-        to right, transparent,
-        black 5rem, black calc(100% - 5rem),
-        transparent
-    );
-}
 
     /* TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE   TEXTE*/
 
@@ -192,14 +191,14 @@ h2{
 }
 
 .bold{
-    font-family: "Days One", system-ui;
+    font-family: 'Days One';
     font-weight: 300;
     text-transform: uppercase;
     color: var(--green);
 }
 
 p{
-    font-family: "ABeeZee", sans-serif;
+    font-family: 'ABeeZee';
     text-transform: uppercase;
     color: white;
     font-size: 11px; font-weight: 500;
@@ -309,7 +308,7 @@ a[href^="tel"] {
 }
 
 .programm a{
-    font-family: "Days One", system-ui;
+    font-family: 'Days One';
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -460,12 +459,15 @@ footer p{ color: var(--green);}
     }
 
     nav{ width: 575px; margin-left: -40px; padding: 3vh 40px 1.5vh;}
-    .wallpaper-sterne{ width: 575px; left: -40px;}
-    .slider{width: 575px; margin-left: -40px!important;}
+    header{ width: 575px; transform: translateX(-50%) ;left: 50%;}
+    .wallpaper-sterne{ width: 575px;}
+    .slider{width: 575px;}
+    .slider02 .marquee{margin-left: 60px;}
     .programm{ width: 575px; margin-left: -40px;}
     .programm-image{ width: 575px;}
     .programm-text{ width: 575px; padding: 40px;}
 
     .card img{ width: 60px;}
     .dotted-line {right: 100px;}
+    .light { width: 20vw; height: 20vw;}
 }
