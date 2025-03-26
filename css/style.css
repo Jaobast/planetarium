@@ -130,15 +130,17 @@ header .description{width: 110px;}
     }
     
     .highlight{
+        width: 100%;
         display: flex;
         padding-left: 4.8rem;
         gap: 4.8rem;
         width: max-content;
     
         animation: slide 15s linear infinite forwards;
+        animation-direction: reverse;
     }
     
-    .highlight-back{ animation-direction: reverse;}
+    .highlight-back{ animation-direction: inherit;}
     
     .slider02 .highlight{ animation: slide02 8s linear infinite;}
     
@@ -242,7 +244,7 @@ a[href^="tel"] {
 
 @keyframes logo-scale {
     0%, 100% { scale: 1;}
-    50% { scale: 0.9;}
+    50% { scale: 0.8;}
 }
 
 #programm{
@@ -462,9 +464,9 @@ footer p{ color: var(--green);}
     }
 
     nav{ width: 575px; margin-left: -40px; padding: 3vh 40px 1.5vh;}
-    header{ width: 575px; transform: translateX(-50%) ;left: 50%; padding-left: 40px; padding-right: 40px;}
+    header{ width: 575px; transform: translateX(-50%) ;left: 50%; padding: 150px 40px 30px;}
     h1{ font-size: 34px;}
-    header .logo{ width: 15vw;}
+    header .logo{ width: 10vw;}
     .wallpaper-sterne{ width: 575px;}
     .slider{width: 575px; margin-left: -40px!important;}
     .logo-break{ width: 5vw;}
