@@ -9,6 +9,16 @@
     <title>Planetarium Fritzlar</title>
     <link rel="stylesheet" href="./css/var.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <script>
+        function verificarSenha() {
+            var senha = prompt("Digite a senha:");
+            if (senha !== "minhaSenha123") {
+                alert("Acesso negado!");
+                window.location.href = "https://google.com";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
